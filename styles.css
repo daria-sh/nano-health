@@ -145,11 +145,13 @@ a, a:hover {text-decoration: none;}
 		height: 45px;
 		margin-top: 14px;
 		background: rgba(21, 2, 0, 0.55);
+
 		padding: 6px 0 0 30px;
 		top:14px;
 		right: 75px;
 		font: italic bold 24px 'Arial';
 		letter-spacing: -1.2px;
+
 		color: #e7eeef;
 		border-radius: 15px 0 0 15px;
 	}
@@ -161,7 +163,9 @@ a, a:hover {text-decoration: none;}
 		height: 45px;
 		margin-top: 90px;
 		background: rgba(21, 2, 0, 0.55);
+
 		padding: 5px 0 0 30px;
+
 		bottom: 0;
 		margin-bottom: 7px;
 		left: 0;
@@ -173,6 +177,7 @@ a, a:hover {text-decoration: none;}
 	.base2 a{
 		color: #e7eeef;
 		font: 14px 'Arial';
+
 		letter-spacing: 0.1px;
 	}
 	.base2 > a.phone{
@@ -181,12 +186,14 @@ a, a:hover {text-decoration: none;}
 	    letter-spacing: -1px;
 	    margin-right: 14px;
 	    font: 17px 'Arial';
+
 	}
 	.submenu{
 		position: relative;
 		background: url(image/submenu-base.png) repeat-x;
 		border: 1px solid #4a4a4a;
 		margin: 7px 1px;
+
 		height: 35px;
 		border-radius: 20px;
 	}
@@ -194,6 +201,7 @@ a, a:hover {text-decoration: none;}
 		float:left;
 		font: 12px 'Tahoma';
 		color: #bfbfbf;
+
 		padding: 9px 5px 10px 20px;
 	}
 	.submenu span.pass{
@@ -204,6 +212,7 @@ a, a:hover {text-decoration: none;}
 	}
 	.submenu span.logup{
 		padding: 9px 0px 9px 23px;
+
 	}
 	.input_text:focus{ /* курсор в форме */
 		float:left;
@@ -239,22 +248,27 @@ a, a:hover {text-decoration: none;}
 		font: 12px 'Tahoma';
 	}
 	.submenu a span{
+
 		text-decoration: underline;
 		font-weight: bold; 
 	}
 	.submenu img{
 		float: right;
+
 		padding: 7px 9px;
+
 	}
 	.submenu span.basket{
 		color: #ffffff;
 		float: right;
+
 		padding: 10px 28px 10px 0;
 	}
 	span.basket > a{
 		text-decoration: underline;
 		color: #ffffff;
 		letter-spacing: 0.4px;
+
 	}
 	.menu_verh{
 		width: 100%;
@@ -264,6 +278,7 @@ a, a:hover {text-decoration: none;}
 	}
 	.menu_verh li{
 		float: left;
+
 		padding: 15px 0 0 23px;
 		letter-spacing: -0.4px;
 	}
@@ -281,17 +296,21 @@ a, a:hover {text-decoration: none;}
 	.product{
 		float: left;
 		margin: 6px 28px 44px 0px;
+
 		width: 223px;
 		height: 182px; 
 	}
 	.product:nth-child(3n){margin-right: 0;}
 	.product img{
+
 		margin-bottom: 6px;
+
 		width: 223px;
 		height: 153px;
 		border: 5px solid #797979;
 	}
 	.product span{
+
 		font: 15.01px 'Arial';
 		color: #005bc1;
 		border-bottom: 1px solid #005bc1;
@@ -300,6 +319,7 @@ a, a:hover {text-decoration: none;}
 	.product span.second_prod,
 	.product span.third_prod{
 		font: 15.21px 'Arial';
+
 	}
 	.sidebar{
 		margin-right: 500px;
@@ -318,15 +338,19 @@ a, a:hover {text-decoration: none;}
 		font: 17px 'Arial';
 		font-weight: bold;
 		color: #c24000;
+
 		margin: 52px 5px 10px 0px;
+
 	}
 	.menu{
 		margin-bottom: 63px;
 	}
 	.menu li{
+
 		padding-top: 13px;
 	}
 	.menu li:first-child{padding-top: 10px;}
+
 	.menu a{
 		font: 13px 'Arial';
 		color: #005bc1;
@@ -335,7 +359,9 @@ a, a:hover {text-decoration: none;}
 	.news h3{
 		font: 17px 'Arial';
 		color: #058b7a;
+
 		margin: 69px 0 16px 0px;
+
 		font-weight: bold;
 	}
 	.news a{
@@ -343,8 +369,10 @@ a, a:hover {text-decoration: none;}
 		color: #005bc1;
 		text-decoration: underline;
 	}
+
 	.news li{padding: 2px 24px 0 0;}
 	.news li:first-child{padding: 4px 24px 0 0;}
+
 	.date{
 		display: block;
 		color: #666666;
@@ -355,10 +383,12 @@ a, a:hover {text-decoration: none;}
 		display: block;
 		width: 140px;
 		border-bottom: 2px solid #dadada;
+
 		margin: 7px 0 10px 0;
 	}
 	.archive_news{
 		margin-top: 17px;
+
 		font: 13px 'Arial';
 		text-decoration: underline;
 	}
@@ -369,16 +399,20 @@ a, a:hover {text-decoration: none;}
 	.quality{
 		width: 100%;
 		height: 415px;
+
 		text-align: justify;
 		letter-spacing: 0.1px;
+
 	}
 	.quality strong{
 		font: bold 13px 'Arial';
 		padding-bottom: 20px;
 	}
 	.quality p{
+
 	    padding-top: 16px;
 		font: 12px/1.4 'Arial';
+
 	}
 	#footer{
 		position: relative;
@@ -392,7 +426,9 @@ a, a:hover {text-decoration: none;}
 	}
 	.copyrigth .copy1{
 		display: block;
+
 		padding: 18px 100px 5px 0;
+
 		font: 11px 'Arial';
 		color: #a4a4a4;
 	}
@@ -416,6 +452,7 @@ a, a:hover {text-decoration: none;}
 	}
 	.mini_nav{
 		float: left;
+
 		width: 435px;
 		margin-top: 15px;
 	}
@@ -424,11 +461,13 @@ a, a:hover {text-decoration: none;}
 		padding-right: 6px;
 	}
 	.mini_nav li:last-child{padding-right: 0;}
+
 	.mini_nav a{
 		text-decoration: underline;
 		font: 11px 'Arial';
 		color: #ffffff;
 	}
+
 	.mini_nav li:nth-child(2n){
 		float: left;
 		color: #ffffff;
@@ -437,6 +476,7 @@ a, a:hover {text-decoration: none;}
 	.ITconstruct{
 		float: right;
 		margin-top: 18px;
+
 		margin-right: 0;
 		width: 165px;
 	}
@@ -451,7 +491,9 @@ a, a:hover {text-decoration: none;}
 	}
 	.ITconstruct img{
 		float: right;
+
 		padding: 51px 2px;
+
 	}
 	.items a:hover img{
 		border: 5px solid #00b31d;
