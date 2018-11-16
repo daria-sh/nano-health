@@ -123,14 +123,14 @@ a, a:hover {text-decoration: none;}
 		border-radius: 20px;
 		border: 1px solid #7f7f7f;
 	}
-	.logo img{
+	.logo .im_logo{
 		position: absolute;
 		top: 43px;
 		left: 61px;
 		width: 95px;
 		height:75px;
 	}
-	.logo span{
+	.logo .im_company{
 		position: relative;
 	    top: 141px;
 	    text-align: center;
