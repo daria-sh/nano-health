@@ -487,6 +487,45 @@ a, a:hover {text-decoration: none;}
 	{
 		display: none;
 	}
+	.menu a:hover,
+	.news a:hover,
+	.archive_news a:hover,
+	.items a:hover span{
+		color: #549ef1; /* голубой */
+		}
+	.base2 a:hover,
+	.submenu a:hover span,
+	span.basket a:hover,
+	.menu_verh a:hover,
+	.mini_nav a:hover,
+	.ITconstruct a:hover,
+	.submenu a:hover.login,
+	.submenu a:hover.logup,
+	.inner_menu_verh li a:hover.catalog{
+		color: #ffde00; /* желтый */
+		}
+	.base2 > a:active.phone,
+	.base2 > a:active.mail,
+	.catalog a:active,
+	.submenu a:active.login,
+	.submenu a:active.logup,
+	.inner_menu_verh li a:active.catalog,
+	.news a:active,
+	.archive_news a:active,
+	.items a:active span,
+	span.basket a:active,
+	.menu_verh a:active,
+	.mini_nav a:active,
+	.ITconstruct a:active{
+		color: #F16A54; /* красный? */
+		} 
+	.ITconstruct a:visited{
+		color: #549ef1; /* голубой? */
+		}
+	.items a:hover img{
+		outline: 5px solid #00b31d; /* зеленый */
+		outline-offset: -5px;
+	}
 	#wrapper{
 		min-height: 100%;
 		height: auto !important;
@@ -519,15 +558,15 @@ a, a:hover {text-decoration: none;}
 		border-radius: 20px;
 		border: 1px solid #7f7f7f;
 	}
-	.logo img{
+	.logo .im_logo{
 		position: absolute;
 		top: 56px;
     	left: 78px;
 	}
-	.logo span{
+	.logo .im_company{
 		position: relative;
-	    top: 141px;
-    	left: 29px;
+	    top: 139px;
+    	left: 25px;
     	color: #e7eeef;
 	}
 	.base2 a{
@@ -615,12 +654,6 @@ a, a:hover {text-decoration: none;}
 		font: 15px 'Arial';
 		color: #ffffff;
 		text-decoration: underline;
-	}
-	.inner_menu_verh a:active,
-	.base2 > a:active.phone,
-	.base2 > a:active.mail,
-	span.basket > a:active{
-		color: #ffde00; /* желый */ 
 	}
 	.inner_menu_verh li a.catalog {
 		display: block;
