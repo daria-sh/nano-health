@@ -223,38 +223,33 @@ a, a:hover {text-decoration: none;}
 	    margin: 10px 0 0 15px;
 	    display: inline-block;
 	}
-	.input_text:focus{ /* курсор в форме */
+	.input_text{
 		float:left;
 		width: 116px;
 		height: 21px;
-		background: linear-gradient(#b5bcbd, #ffffff);
 		margin: 7px 3px;
 		border-radius: 5px; 
 		padding-left: 8px;
 		border: none;
 		font: 12px 'Tahoma';
 	}
-	.input_text:invalid{ /* в поле текста нет */
-		float:left;
-		width: 116px;
-		height: 21px;
-		background: linear-gradient(#707779, #4e5658);
-		margin: 7px 3px;
-		border-radius: 5px; 
-		padding-left: 8px;
-		border: none;
-		font: 12px 'Tahoma';
+	.input_text:invalid{ /* поле неактивно */
+		background: -webkit-linear-gradient(#707779, #4e5658);
+		background: -ms-linear-gradient(#707779, #4e5658);
+		background: -moz-linear-gradient(#707779, #4e5658);
+		background: -o-linear-gradient(#707779, #4e5658);
+	}
+	.input_text:focus{ /* в поле курсор */
+		background: -webkit-linear-gradient(#b5bcbd, #ffffff);
+		background: -ms-linear-gradient(#b5bcbd, #ffffff);
+		background: -moz-linear-gradient(#b5bcbd, #ffffff);
+		background: -o-linear-gradient(#b5bcbd, #ffffff);
 	}
 	.input_text:valid{ /* в поле текст*/
-		float:left;
-		width: 116px;
-		height: 21px;
-		background: linear-gradient(#b5bcbd, #ffffff);
-		margin: 7px 3px;
-		border-radius: 5px; 
-		padding-left: 8px;
-		border: none;
-		font: 12px 'Tahoma';
+		background: -webkit-linear-gradient(#b5bcbd, #ffffff);
+		background: -ms-linear-gradient(#b5bcbd, #ffffff);
+		background: -moz-linear-gradient(#b5bcbd, #ffffff);
+		background: -o-linear-gradient(#b5bcbd, #ffffff);
 	}
 	.submenu a {
 		color: #f6f6f6;
