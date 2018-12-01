@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	<title>Нанотехнологии здоровья</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -13,9 +13,7 @@
 				<div class="top">
 					<div class="logo">
 						<a href="/">
-							<img class="im_logo" src="image/logo.png" alt="" >
-							<img class="im_company" src="image/company.png" alt="">
-						</a>
+							<img class="im_logo" src="image/logo.png" alt="" ></a><img class="im_company" src="image/company.png" alt="">
 					</div>
 					<div class="contact_bg">
 						<div class="base1">Нанотехнологии здоровья</div>
@@ -45,7 +43,11 @@
 			</div>
 			<ul class="inner_menu_verh container">
 				<li><a class="active" href="#">Главная</a></li>
-				<li><a class="catalog" href="#">Каталог</a>
+				<li class="spoiler">
+					<input type="checkbox" id="sp_catalog">
+					<label class="btn" for="sp_catalog">
+						<a class="catalog">Каталог</a>
+					</label>
 					<ul class="active_mob">
 						<li><a href="#">Электронные сигареты</a></li>
 						<li><a href="#">Трубки</a></li>
@@ -132,7 +134,6 @@
 				<div class="copyrigth">
 					<span class="copy1">Copyright &copy;2007-2010</span>
 					<span class="copy2">&copy; <strong>"Company"</strong>, 2010</span>
-
 					<div class="f_logo"><a href="/">
 						<img src="image/logo.png" alt="" >
 						<span>Company</span></a>
