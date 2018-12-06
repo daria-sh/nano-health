@@ -57,8 +57,10 @@ a, a:hover {text-decoration: none;}
 		min-width: 960px;
 	}
 	.inner_menu_verh .active_mob,
-	.menu_mob,
-	.spoiler input[type=checkbox]{
+	.active_mob,
+	.menu_mob img,
+	.menu_mob .menu,
+	.clicked_subunits{
 		display: none;
 	}
 	.menu a:hover,
@@ -76,7 +78,8 @@ a, a:hover {text-decoration: none;}
 	.mini_nav a:hover,
 	.ITconstruct a:hover,
 	.submenu a:hover.login,
-	.submenu a:hover.logup{
+	.submenu a:hover.logup,
+	.menu_verh li:hover.catalog{
 		color: #ffde00; /* желтый */
 		}
 	.menu a:active,
@@ -279,15 +282,22 @@ a, a:hover {text-decoration: none;}
 	}
 	.inner_menu_verh{
 		display: flex;
-		padding: 15px 34px;
+		padding: 15px 23px;
     	justify-content: space-between;
 	}
-	.inner_menu_verh li:last-child{margin-right: 7px;}
+	.inner_menu_verh li:last-child{margin-right: 28px;}
 	.menu_verh a{
 		display: block;
 		font: 16px 'Arial';
 		color: #ffffff;
 		text-decoration: underline;
+	}
+	.menu_verh .catalog{
+		display: block;
+		font: 16px 'Arial';
+		color: #ffffff;
+		text-decoration: underline;
+		cursor: pointer;
 	}
 	.menu_verh .active{
 		color: #ffde00;
@@ -485,7 +495,9 @@ a, a:hover {text-decoration: none;}
 	.mini_nav,
 	.submenu span.log,
 	.submenu span.pass,
-	.input_text{
+	.input_text,
+	.active_mob,
+	.inner_menu_verh{
 		display: none;
 	}
 	.menu a:hover,
@@ -502,9 +514,12 @@ a, a:hover {text-decoration: none;}
 	.ITconstruct a:hover,
 	.submenu a:hover.login,
 	.submenu a:hover.logup,
-	.inner_menu_verh li a:hover.catalog{
+	.clicked_name:hover,
+	.menu_verh li:hover.catalog
+	{
 		color: #ffde00; /* желтый */
 		}
+
 	.base2 > a:active.phone,
 	.base2 > a:active.mail,
 	.catalog a:active,
@@ -539,7 +554,7 @@ a, a:hover {text-decoration: none;}
 		width: 480px;
 	}
 	.container{
-		width: 480px;
+		/*width: 480px;*/
 		margin: 0 auto;
 		padding: 0 27px;
 	}
@@ -638,11 +653,12 @@ a, a:hover {text-decoration: none;}
 		float: left;
 		margin-top: 18px;
 	}
-	.menu_mob a.active{
+	.menu_mob a.menu{
 		display: inline-block;
     	margin: 22px 0 0 18px;
 		font: 15px 'Arial';
 		color: #ffe558;
+		cursor: pointer;
 	}
 	.inner_menu_verh li{
 		display: block;
@@ -656,36 +672,48 @@ a, a:hover {text-decoration: none;}
 		color: #ffffff;
 		text-decoration: underline;
 	}
-	.spoiler > li a.catalog {
+	.inner_menu_verh span.catalog{
+		font: 15px 'Arial';
+		color: #ffffff;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+		/* спойлер для моб */
+	.menu_mob li{
+		display: block;
+		margin: 16px 0 0 18px;
+		cursor: pointer;
+	}
+	.menu_mob > .catalog > li:first-child{
+		margin: 25px 0 0 44px;
+	}
+	.menu_mob a{
+		font: 15px 'Arial';
+		color: #ffffff;
+		text-decoration: underline;
+	}
+	.menu_mob > a.catalog {
 		display: block;
 		text-decoration: underline;
 		font: 15px 'Arial';
-		color: #005bc1;
 	    padding: 16px 0 0 44px;
+	    color: #ffffff;
 	}
-	.btn a{
-		display: block; 
-		cursor: pointer;
-		}
-	.spoiler input[type=checkbox] {
-		display: none;
-		} /* скрыть cheсkbox */
-	.spoiler input[type=checkbox] .btn a.catalog, ul.active_mob{
-		display: none;
-		} /* без нажатия */
-	.spoiler input[type=checkbox]:checked + label > a.catalog {/* белый фон для заголовка при нажатии */
+		/* белый фон для заголовка при нажатии */
+	.catalog.clicked_name {
 		display: block;
 		background-color: #ffffff;
-		margin: 0 313px 0 -20px;
+		margin: -2px 283px 0 -18px;
 		border-radius: 10px 10px 0 0;
 		padding: 8px 0 2px 18px;
 		color: #005bc1;
 		}
-	.spoiler input[type=checkbox]:checked ~ ul.active_mob{/*  белый фон и подпункты при нажатии */
-	 display: block;
+		/*  белый фон и подпункты при нажатии */
+	.active_mob.clicked_subunits{
+	 	display: block;
 		background-color: #ffffff; 
 		border-radius: 0 10px 10px;
-		margin: -1px 2px 0px -20px;
+		margin: -1px -27px 0px -18px;
 		}
 	.content{
 		width: 100%;
@@ -710,7 +738,7 @@ a, a:hover {text-decoration: none;}
 		height: 182px; 
 		margin: 4px 30px 49px 2px;
 	}
-	.items .active img{
+	.items .active .prod_pict{
 		outline: 5px solid #00b31d; /* зеленый */
 		outline-offset: -5px;
 	}
@@ -719,7 +747,7 @@ a, a:hover {text-decoration: none;}
 	}
 	.product:nth-child(n){margin: 41px 0 0 0;}
 	.product:nth-child(2n){margin: 41px 0 0 15px;}
-	.product img{
+	.product .prod_pict{
 		width: 206px;
     	height: 145px;
 		outline: 5px solid #797979;

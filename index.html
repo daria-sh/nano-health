@@ -38,58 +38,55 @@
 		<!-- максимальное количество пунктов меню для нормального отображения: 12 -->
 		<div class="menu_verh clearfix">
 			<div class="menu_mob container">
-				<img src="image/icon-menu-mob.png" alt="">
-				<a href="#" class="active">Меню</a>
+				<img class="menu_img" src="image/icon-menu-mob.png" alt="">
+				<a class="menu">Меню</a>
+				<ul class="inner_menu_verh container">
+					<li><a class="active" href="#">Главная</a></li>
+					<!-- переход по ссылке на Каталог указан в скрипте -->
+					<li><a class="catalog">Каталог</a>
+						<ul class="active_mob">
+							<li><a href="#">Электронные сигареты</a></li>
+							<li><a href="#">Трубки</a></li>
+							<li><a href="#">Картриджи</a></li>
+							<li><a href="#">Аккумуляторы и атомайзеры</a></li>
+							<li><a href="#">Аксессуары</a></li>
+							<li><a href="#">Зарядные устройства</a></li>
+							<li><a href="#">Жидкости для заправки</a></li>
+							<li><a href="#">Подарочные наборы</a></li>
+						</ul>
+					
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Новости</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
 			</div>
-			<ul class="inner_menu_verh container">
-				<li><a class="active" href="#">Главная</a></li>
-				<li class="spoiler">
-					<input type="checkbox" id="sp_catalog">
-					<label class="btn" for="sp_catalog">
-						<a class="catalog">Каталог</a>
-					</label>
-					<ul class="active_mob">
-						<li><a href="#">Электронные сигареты</a></li>
-						<li><a href="#">Трубки</a></li>
-						<li><a href="#">Картриджи</a></li>
-						<li><a href="#">Аккумуляторы и атомайзеры</a></li>
-						<li><a href="#">Аксессуары</a></li>
-						<li><a href="#">Зарядные устройства</a></li>
-						<li><a href="#">Жидкости для заправки</a></li>
-						<li><a href="#">Подарочные наборы</a></li>
-					</ul>
-				</li>
-				<li><a href="#">О компании</a></li>
-				<li><a href="#">Новости</a></li>
-				<li><a href="#">Доставка и оплата</a></li>
-				<li><a href="#">Контакты</a></li>
-			</ul>
 		</div>
 		<div class="middle container clearfix">
 			<div class="content">
 				<ul class="items clearfix">
-					<li class="product active"><a href="#"><img src="image/1.jpg" alt="">
+					<li class="product active"><a href="#"><img class="prod_pict" src="image/1.jpg" alt="">
 						<span>Электронные сигареты</span></a>
 					</li>
-					<li class="product"><a href="#"><img src="image/2.jpg" alt="">
+					<li class="product"><a href="#"><img class="prod_pict" src="image/2.jpg" alt="">
 						<span>Трубки</span></a>
 					</li>
-					<li class="product"><a href="#"><img src="image/3.jpg" alt="">
+					<li class="product"><a href="#"><img class="prod_pict" src="image/3.jpg" alt="">
 						<span>Жидкости для заправки</span></a>
 					</li>
-					<li class="product"><a href="#"><img src="image/4.jpg" alt="">
+					<li class="product"><a href="#"><img class="prod_pict" src="image/4.jpg" alt="">
 						<span>Аккумуляторы и атомайзеры</span></a>
 					</li>
-					<li class="product"><a href="#"><img src="image/5.jpg" alt="">
+					<li class="product"><a href="#"><img class="prod_pict" src="image/5.jpg" alt="">
 						<span>Картриджи</span></a>
 					</li>
-					<li class="product"><a href="#"><img src="image/6.jpg" alt="">
+					<li class="product"><a href="#"><img class="prod_pict" src="image/6.jpg" alt="">
 						<span>Зарядные устройства</span></a>
 					</li>
-					<li class="product"><a href="#"><img src="image/7.jpg" alt="">
+					<li class="product"><a href="#"><img class="prod_pict" src="image/7.jpg" alt="">
 						<span>Аксессуары</span></a>
 					</li>
-					<li class="product"><a href="#"><img src="image/8.jpg" alt="">
+					<li class="product"><a href="#"><img class="prod_pict" src="image/8.jpg" alt="">
 						<span>Подарочные наборы</span></a>
 					</li>
 				</ul>
@@ -156,5 +153,46 @@
 			</div>
 		</div>
 	</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+// скрипт для выпадения подуровней Меню 
+	$(document).ready(function() {
+		$('.menu_mob').on('click', '.menu, .menu_img', function() {
+			if ($(window).width() <= 480){
+			$(this).siblings('.inner_menu_verh').slideToggle(0);
+		}
+		});
+	});
+	$( window ).resize(function() {
+		// turn off yellow
+		if ($(window).width() <= 480){
+			$('.inner_menu_verh').css('display', 'block');
+			if ($('.catalog').hasClass('clicked_name')){
+				$('.catalog').css("color", "#005bc1");
+				$('.active_mob').css('display', 'block');
+			}
+		} 
+		else{
+			$('.inner_menu_verh').css('display', 'flex');
+			$('.catalog').css("color", "#ffffff");
+			$('.active_mob').css('display', 'none');
+		}
+	});
+// скрипт для выпадения подуровней Каталога
+	$(document).ready(function() {
+		$('.inner_menu_verh').on('click', '.catalog', function() {
+			if ($(window).width() <= 480){
+			$(this).siblings('.active_mob').slideToggle(0);
+				if (!$('.catalog').hasClass('clicked_name')){
+					$('.catalog').addClass('clicked_name');
+					$('.active_mob').addClass('clicked_subunits');
+				}
+				else 
+					$('.catalog').removeClass('clicked_name');
+			}
+			else document.location.href = "#";
+		});
+	});
+</script>
 </body>
 </html>
