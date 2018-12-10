@@ -24,7 +24,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	height: 100%;
-	font: 12px/16px Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	background-color: #f6f6f6;
 }
 ol, ul, nav {list-style: none;}
@@ -52,6 +52,18 @@ a, a:hover {text-decoration: none;}
 	display: table;
 	clear: both;
 }
+input[type="submit"] {
+	    background: none;
+	    border: 0;
+	    color: inherit;
+	    font: inherit;
+	    line-height: normal;
+	    overflow: visible;
+	    padding: 0;
+	    -webkit-appearance: button; 
+	       -moz-user-select: none;
+	        -ms-user-select: none;
+	}
 @media screen and (min-width: 481px){
 	body{
 		min-width: 960px;
@@ -69,9 +81,6 @@ a, a:hover {text-decoration: none;}
 	.items a:hover span{
 		color: #549ef1; /* голубой */
 		}
-	.base2 a:hover{
-		color: #ffde00; /* желтый */
-		}
 	.submenu a:hover span,
 	span.basket a:hover,
 	.menu_verh a:hover,
@@ -79,7 +88,10 @@ a, a:hover {text-decoration: none;}
 	.ITconstruct a:hover,
 	.submenu a:hover.login,
 	.submenu a:hover.logup,
-	.menu_verh li:hover.catalog{
+	.menu_verh a:hover.catalog,
+	.base2 a:hover.phone,
+	.base2 a:hover.mail,
+	input[type="submit"]:hover{
 		color: #ffde00; /* желтый */
 		}
 	.menu a:active,
@@ -119,29 +131,15 @@ a, a:hover {text-decoration: none;}
 		width: 209px;
 	    height: 201px;
 		text-align: center;
-		font-size: 24px;
-		color: #e7eeef;
-		text-transform: uppercase;
-		background-color: #080808;
 		-webkit-border-radius: 20px;
 		-ms-border-radius: 20px;
 		-moz-border-radius: 20px;
 		-o-border-radius: 20px;
 		border-radius: 20px;
 		border: 1px solid #7f7f7f;
-	}
-	.logo .im_logo{
-		position: absolute;
-		top: 43px;
-		left: 61px;
-		width: 95px;
-		height:75px;
-	}
-	.logo .im_company{
-		position: relative;
-	    top: 141px;
-	    text-align: center;
-	    color: #e7eeef;
+		background: url(image/logo.png) top 42px right 49px no-repeat,
+					url(image/company.png) bottom 41px left 38px no-repeat;
+		background-color: #080808;
 	}
 	.contact_bg{
 		float: right;
@@ -169,40 +167,41 @@ a, a:hover {text-decoration: none;}
 		padding: 7px 0 0px 31px;
 		top:14px;
 		right: 75px;
-		font: italic bold 24px 'Arial';
+		font-style: italic;
+		font-weight: bold;
+		font-size: 24px;
 		color: #e7eeef;
 		border-radius: 15px 0 0 15px;
 	}
 	.base2{
-		display: block;
 		float: left;
-		left: 285px;
 		width: 385px;
 		height: 45px;
 		margin-top: 90px;
 		background: rgba(21, 2, 0, 0.55);
-		padding: 5px 0 0 30px;
 		bottom: 0;
 		margin-bottom: 7px;
 		left: 0;
-		font: italic bold 24px 'Arial';
 		color: #e7eeef;
 		border-radius: 0 10px 10px 14px;
 	}
-	.base2 a{
+	.base2 a.mail{
+		display: inline-block;
+		margin: 14px 0 0 30px;
 		color: #e7eeef;
-		font: 14px 'Arial';
+		font-size: 14px;
 	}
-	.base2 > a.phone{
+	.base2 a.phone{
 		float: right;
-		padding: 8px 35px 9px 0;
+		padding: 12px 35px 9px 0;
 	    font: 17px 'Arial Narrow', 'PT Sans Narrow', sans-serif;
+	    color: #e7eeef;
 	}
 	.submenu{
 		position: relative;
 		background: url(image/submenu-base.png) repeat-x;
 		border: 1px solid #4a4a4a;
-		margin: 9px 0px;
+		margin: 5px 0px;
     	height: 36px;
 		border-radius: 20px;
 		box-shadow: 2px 13.2px 8px rgba(0, 0, 0, 0.4);
@@ -216,18 +215,19 @@ a, a:hover {text-decoration: none;}
 	.submenu span.pass{
 		padding: 11px 5px 11px 18px;
 	}
-	.submenu a.login{
+	.submenu .login{
 	    font: bold 12px 'Tahoma', 'Geneva';
 	    color: #f6f6f6;
 	    text-decoration: underline;
 	    margin: 10px 9px 0 11px;
-	    display: inline-block;
+	    cursor: pointer;
 	}
+
 	.submenu a.logup{
 	    font: bold 12px 'Tahoma', 'Geneva';
 	    color: #f6f6f6;
 	    text-decoration: underline;
-	    margin: 10px 0 0 15px;
+	    margin: 10px 0 0 14px;
 	    display: inline-block;
 	}
 	.input_text{
@@ -269,7 +269,11 @@ a, a:hover {text-decoration: none;}
 	.submenu span.basket{
 	    color: #ffffff;
 	    float: right;
-	    padding: 11px 28px 0 0;
+	    padding: 11px 0 0 33px;
+	}
+	.basket{
+		background: url(image/icon-basket.png) top 8px right 173px no-repeat;
+		width: 193px;
 	}
 	span.basket > a{
 		color: #ffffff;
@@ -288,13 +292,13 @@ a, a:hover {text-decoration: none;}
 	.inner_menu_verh li:last-child{margin-right: 28px;}
 	.menu_verh a{
 		display: block;
-		font: 16px 'Arial';
+		font-size: 16px;
 		color: #ffffff;
 		text-decoration: underline;
 	}
 	.menu_verh .catalog{
 		display: block;
-		font: 16px 'Arial';
+		font-size: 16px;
 		color: #ffffff;
 		text-decoration: underline;
 		cursor: pointer;
@@ -302,7 +306,6 @@ a, a:hover {text-decoration: none;}
 	.menu_verh .active{
 		color: #ffde00;
 	}
-	.items{height: 722px;}
 	.product{
 		float: left;
 		width: 220px;
@@ -325,7 +328,7 @@ a, a:hover {text-decoration: none;}
 	}
 	.product span{
 		display: inline-block;
-		font: 15.01px 'Arial';
+		font-size: 15.01px;
 		color: #005bc1;
 		text-decoration: underline;
 		padding: 5px 0 0 0px;
@@ -343,8 +346,7 @@ a, a:hover {text-decoration: none;}
 		padding-bottom: 266px;
 	}
 	.menu h3{
-		font: 17px 'Arial';
-		font-weight: bold;
+		font-size: bold 17px;
 		color: #c24000;
 		margin: 0 5px 10px 0px;
 	}
@@ -352,46 +354,48 @@ a, a:hover {text-decoration: none;}
 		margin-bottom: 63px;
 	}
 	.menu li{
-		padding: 13px 0 0 3px;
+		padding: 11px 0 0 3px;
 	}
 	.menu li:first-child{padding: 10px 0 0 2px;}
 	.menu a{
 		display: inline-block;
 	    text-decoration: underline;
-	    font: 13px 'Arial';
+	    font-size: 13px;
 	    color: #005bc1;
 	}
 	.news h3{
-		font: 17px 'Arial';
+		font: bold 17px;
 		color: #058b7a;
 		margin: 70px 0 16px 1px;
-		font-weight: bold;
 	}
 	.news a{
-		font: 11px 'Arial';
+		font-size: 11px;
 		color: #005bc1;
 		text-decoration: underline;
 	}
-	.news li{padding: 0.5px 27px 0px 1.8px;}
-	.news li:first-child{padding: 3px 24px 2px 2px;}
+	.news li{
+		padding: 0 27px 0px 1.8px;
+		line-height: 15px;
+	}
+	.news li:first-child{padding: 4px 24px 2px 2px;}
 	.date{
 		display: block;
 		color: #666666;
-		margin-top: 5px;
+		margin-top: 3px;
 		font-size: 10px
 	}
 	li.line{
 		display: block;
 		width: 140px;
 		border-bottom: 2px solid #dadada;
-		margin: 10.4px 0px 10px 1px;
+		margin: 12.4px 0px 8px 1px;
 	}
 	.archive_news{
 		margin: 25px 0 0 1px;
-		font: 13px 'Arial';
+		font-size: 13px;
 	}
 	.archive_news a{
-		font: 13px 'Arial';
+		font-size: 13px;
 		color: #005bc1;
 		text-decoration: underline;
 	}
@@ -400,14 +404,16 @@ a, a:hover {text-decoration: none;}
 	    width: 724px;
 	    height: 415px;
 	    text-align: justify;
+	    margin-top: 15px;
 	}
 	.quality strong{
-		font: bold 13px 'Arial';
-		padding-bottom: 20px;
+		font-size: 13px;
+		font-weight: bold;
 	}
 	.quality p{
 	    padding-top: 16px;
-		font: 12px/16px 'Arial';
+		font-size: 12px;
+		line-height: 16px;
 	}
 	#footer{
 		position: relative;
@@ -421,8 +427,8 @@ a, a:hover {text-decoration: none;}
 	}
 	.copyrigth .copy1{
 		display: block;
-		padding: 20px 0 6px 0;
-		font: 11px 'Arial';
+		padding: 22px 0 6px 1px;
+		font-size: 11px;
 		color: #a4a4a4;
 	}
 	.copyrigth .copy2{
@@ -430,18 +436,16 @@ a, a:hover {text-decoration: none;}
 		font: 12px 'Tahoma', 'Geneva';
 		color: #a4a4a4;
 	}
-	.f_logo img{
-		position: relative;
-		margin: 19px 8px 0 8px;
-		width: 35px;
-		height: 28px;
-	}
-	.f_logo span{
-		position: relative;
-	    padding: 0 212px 0 0;
+	.f_logo a{
+	    position: relative;
+	    display: block;
 	    text-transform: uppercase;
-	    font: 9px 'Arial';
+	    font-size: 9px;
 	    color: #e7eeef;
+	    background: url(image/logo.png) top 20px left 10px no-repeat;
+	    height: 70px;
+	    background-size: 35px 28px;
+	    padding-top: 55px;
 	}
 	.mini_nav{
 		float: left;
@@ -460,27 +464,25 @@ a, a:hover {text-decoration: none;}
 	.mini_nav li:last-child{padding-right: 0;}
 	.mini_nav a{
 		text-decoration: underline;
-		font: 11px 'Arial';
+		font-size: 11px;
 		color: #ffffff;
 	}
 	.ITconstruct{
 	    float: right;
-	    margin-top: 20px;
+	    margin-top: 22px;
 	    margin-right: -6px;
 	    width: 170px;
+	    background: url(image/counter.png) top 64px right 7px no-repeat;
+	    height: 100px;
 	}
 	.ITconstruct span{
 		float: left;
-		font: 11px 'Arial';
+		font-size: 11px;
 		color: #ffffff;
 	}
 	.ITconstruct a{
 		text-decoration: underline;
 		color: #ffffff;
-	}
-	.ITconstruct img{
-		float: right;
-		padding: 52px 7px;
 	}
 	.items a:hover img{
 		outline: 5px solid #00b31d; /* зеленый */
@@ -500,26 +502,6 @@ a, a:hover {text-decoration: none;}
 	.inner_menu_verh{
 		display: none;
 	}
-	.menu a:hover,
-	.news a:hover,
-	.archive_news a:hover,
-	.items a:hover span{
-		color: #549ef1; /* голубой */
-		}
-	.base2 a:hover,
-	.submenu a:hover span,
-	span.basket a:hover,
-	.menu_verh a:hover,
-	.mini_nav a:hover,
-	.ITconstruct a:hover,
-	.submenu a:hover.login,
-	.submenu a:hover.logup,
-	.clicked_name:hover,
-	.menu_verh li:hover.catalog
-	{
-		color: #ffde00; /* желтый */
-		}
-
 	.base2 > a:active.phone,
 	.base2 > a:active.mail,
 	.catalog a:active,
@@ -554,7 +536,6 @@ a, a:hover {text-decoration: none;}
 		width: 480px;
 	}
 	.container{
-		/*width: 480px;*/
 		margin: 0 auto;
 		padding: 0 27px;
 	}
@@ -566,24 +547,18 @@ a, a:hover {text-decoration: none;}
 		font-size: 24px;
 		color: #e7eeef;
 		text-transform: uppercase;
-		background-color: #080808;
 		-webkit-border-radius: 20px;
 		-ms-border-radius: 20px;
 		-moz-border-radius: 20px;
 		-o-border-radius: 20px;
 		border-radius: 20px;
 		border: 1px solid #7f7f7f;
+		background: url(image/logo.png) top 40px left 50px no-repeat,
+					url(image/company.png) bottom 41px left 25px no-repeat;
+		background-color: #080808;
 	}
-	.logo .im_logo{
-		position: absolute;
-		top: 56px;
-    	left: 78px;
-	}
-	.logo .im_company{
-		position: relative;
-	    top: 139px;
-    	left: 25px;
-    	color: #e7eeef;
+	.top{
+		margin-bottom: -4px;
 	}
 	.base2 a{
 		color: #e7eeef;
@@ -591,13 +566,13 @@ a, a:hover {text-decoration: none;}
 	.base2 > a.phone{
 		position: absolute;
 		width: 227px;
-	    font: 1.5em 'Arial Narrow', 'PT Sans Narrow', sans-serif;
+	    font: 18px 'Arial Narrow', 'PT Sans Narrow', sans-serif;
 	    top: 51px;
 	    left: 233px;
 	}
 	.base2 > a.mail{
 		position: absolute;
-	    font: 14px 'Arial';
+	    font-size: 14px;
 	    top: 79px;
 	    left: 232px;
 	    text-decoration: underline;
@@ -606,7 +581,9 @@ a, a:hover {text-decoration: none;}
 		position: absolute;
 		top: 123px;
 		left: 232px;
-		font: italic bold 24px 'Arial';
+		font-style: italic;
+		font-weight: bold;
+		font-size: 24px;
 		color: #e7eeef;
 	}
 	.submenu{
@@ -617,7 +594,7 @@ a, a:hover {text-decoration: none;}
 	    border-radius: 20px;
 	    box-shadow: 2px 13.2px 8px rgba(0, 0, 0, 0.4);
 	}
-	.submenu a.login{
+	.submenu .login{
 		display: inline-block;
 	    font: bold 12px 'Tahoma', 'Geneva';
 	    color: #f6f6f6;
@@ -635,6 +612,7 @@ a, a:hover {text-decoration: none;}
 	    color: #ffffff;
 	    float: right;
 	    padding: 11px 18px 0 0;
+	    font-size: 12px;
 	}
 	span.basket > a{
 		text-decoration: underline;
@@ -656,7 +634,7 @@ a, a:hover {text-decoration: none;}
 	.menu_mob a.menu{
 		display: inline-block;
     	margin: 22px 0 0 18px;
-		font: 15px 'Arial';
+		font-size: 15px;
 		color: #ffe558;
 		cursor: pointer;
 	}
@@ -668,12 +646,12 @@ a, a:hover {text-decoration: none;}
 		margin: 25px 0 0 44px;
 	}
 	.inner_menu_verh a{
-		font: 15px 'Arial';
+		font-size: 15px;
 		color: #ffffff;
 		text-decoration: underline;
 	}
 	.inner_menu_verh span.catalog{
-		font: 15px 'Arial';
+		font-size: 15px;
 		color: #ffffff;
 		text-decoration: underline;
 		cursor: pointer;
@@ -688,14 +666,14 @@ a, a:hover {text-decoration: none;}
 		margin: 25px 0 0 44px;
 	}
 	.menu_mob a{
-		font: 15px 'Arial';
+		font-size: 15px;
 		color: #ffffff;
 		text-decoration: underline;
 	}
 	.menu_mob > a.catalog {
 		display: block;
 		text-decoration: underline;
-		font: 15px 'Arial';
+		font-size: 15px;
 	    padding: 16px 0 0 44px;
 	    color: #ffffff;
 	}
@@ -729,7 +707,8 @@ a, a:hover {text-decoration: none;}
 	}
 	.active_mob a{
 		text-decoration: underline;
-		font: italic 15px 'Arial';
+		font-size: 15px;
+		font-style: italic;
 		color: #005bc1;
 	}
 	.product{
@@ -755,18 +734,19 @@ a, a:hover {text-decoration: none;}
 	}
 	.product span{
 		display: inline-block;
-		font: 15.01px 'Arial';
+		font-size: 15.01px;
 		color: #005bc1;
 		text-decoration: underline;
 		padding: 5px 0 0 0px;
 	}
 	.news h3{
-	    font: bold 21px 'Arial';
+	    font-size: 21px;
+	    font-style: bold;
 	    color: #058b7a;
 	    margin: 34px 0 16px 0px;
 	}
 	.news a{
-		font: 15px 'Arial';
+		font-size: 15px;
 		color: #005bc1;
 		text-decoration: underline;
 	}
@@ -787,7 +767,7 @@ a, a:hover {text-decoration: none;}
 		margin: 19px 0 0 -1px;
 	}
 	.archive_news a{
-		font: 15px 'Arial';
+		font-size: 15px;
 		color: #005bc1;
 		text-decoration: underline;
 	}
@@ -795,12 +775,14 @@ a, a:hover {text-decoration: none;}
 		margin-top: 48px;
 	}
 	.quality strong{
-		font: bold 21px 'Arial';
+		font-size: 21px;
+		font-style: bold;
 		color: #666666;
 	}
 	.quality p{
 	    padding-top: 10px;
-		font: 15px/19px 'Arial';
+		font-size: 15px;
+		line-height: 19px;
 	}
 	#footer{
 		background: url(image/h-bg.png) repeat;
@@ -816,7 +798,7 @@ a, a:hover {text-decoration: none;}
 	.copyrigth .copy1{
 		display: block;
 		padding: 40px 0 6px 2px;
-		font: 11px 'Arial';
+		font-size: 11px;
 		color: #a4a4a4;
 	}
 	.copyrigth .copy2{
@@ -824,35 +806,35 @@ a, a:hover {text-decoration: none;}
 		font: 12px 'Tahoma', 'Geneva';
 		color: #a4a4a4;
 	}
-	.f_logo img{
-		margin: 19px 8px 0 11px;
-		height: 28px;
-	}
-	.f_logo span{
-	    padding: 0 116px 0 1px;
+	.f_logo a{
+	    position: relative;
+	    display: block;
 	    text-transform: uppercase;
-	    font: 9px 'Arial';
+	    font-size: 9px;
 	    color: #e7eeef;
+	    background: url(image/logo.png) top 20px left 10px no-repeat;
+	    height: 70px;
+	    background-size: 35px 28px;
+	    padding-top: 55px;
 	}
 	.ITconstruct{
 	    float: right;
-	    margin-top: 19px;
+	    margin-top: 22px;
+	    margin-right: -6px;
 	    width: 170px;
+		background: url(image/counter.png) top 76px right 7px no-repeat;
+    	height: 110px;
 	}
 	.ITconstruct span{
-		float: right;
+	    float: right;
 	    display: block;
-	    margin-top: 21px;
-	    font: 11px 'Arial';
+	    margin-top: 18px;
+	    font-size: 11px;
 	    color: #ffffff;
-	    margin-right: 2px;
+	    margin-right: 5px;
 	}
 	.ITconstruct a{
 		text-decoration: underline;
 		color: #ffffff;
-	}
-	.ITconstruct img{
-		float: right;
-		padding: 46px 1px 0 0
 	}
 }
