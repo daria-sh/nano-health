@@ -8,8 +8,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -18,7 +18,7 @@ time, mark, audio, video {
     font-size: 100%;
     vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -89,7 +89,7 @@ p{
         outline-offset: -5px;
     }
     .ITconstruct a:visited{
-        color: #549ef1; 
+        color: #549ef1;
     }
     a:hover.catalog,
     input[type="submit"]:hover{
@@ -184,7 +184,7 @@ p{
     }
     .header_card label{
         float: left;
-        font: 12px 'Tahoma', 'Geneva';
+        font: 12px 'Tahoma', 'Geneva', sans-serif;
         color: #bfbfbf;
         padding: 10px 4px 10px 22px;
     }
@@ -202,10 +202,10 @@ p{
         cursor: pointer;
     }
     input[type="submit"].login{
-    background: none;
-    border: 0;
-    -webkit-appearance: button; 
-       -moz-user-select: none;
+        background: none;
+        border: 0;
+        -webkit-appearance: button;
+        -moz-user-select: none;
         -ms-user-select: none;
     }
     .header_card a{
@@ -220,7 +220,7 @@ p{
         width: 116px;
         height: 21px;
         margin: 7px 1px 0 3px;
-        border-radius: 5px; 
+        border-radius: 5px;
         padding-left: 8px;
         border: none;
         font: 12px 'Tahoma', 'Geneva', sans-serif;
@@ -292,7 +292,7 @@ p{
     .product{
         float: left;
         width: 220px;
-        height: 182px; 
+        height: 182px;
         margin: 4px 30px 49px 2px;
     }
     .items{
@@ -486,15 +486,15 @@ p{
     }
     aside section.menu,
     .hide{
-        display: none; 
+        display: none;
     }
     span.basket a:active,
     .product a:active span{
         color: #F16A54; /* красный? */
-    } 
+    }
     .ITconstruct a:visited{
-    color: #549ef1; /* голубой? */
-        }
+        color: #549ef1; /* голубой? */
+    }
     .items a:active img{
         outline: 5px solid #00b31d; /* зеленый */
         outline-offset: -5px;
@@ -567,11 +567,11 @@ p{
         text-decoration: underline;
         margin: 10px 0 0 25px;
     }
-    input[type="submit"].login{ 
-    background: none;
-    border: 0;
-    -webkit-appearance: button; 
-       -moz-user-select: none;
+    input[type="submit"].login{
+        background: none;
+        border: 0;
+        -webkit-appearance: button;
+        -moz-user-select: none;
         -ms-user-select: none;
     }
     .header_card a {
@@ -672,7 +672,7 @@ p{
     /*  белый фон и подпункты при нажатии */
     .active_mob.clicked_subunits{
         display: block;
-        background-color: #fff; 
+        background-color: #fff;
         border-radius: 0 10px 10px;
     }
     .content{

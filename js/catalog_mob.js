@@ -16,6 +16,8 @@ $(document).ready(function() {
       $('.active_mob').toggleClass('hide');
       $(this).toggleClass('clicked_name');
       $('.active_mob').toggleClass('clicked_subunits');
+    } else {
+      document.location.href = "#";
     }
   });
 });
