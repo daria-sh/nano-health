@@ -46,8 +46,7 @@ table {
 	box-sizing: border-box;
 }
 a, a:hover {text-decoration: none;}
-body a:active,
-body a+a:active{
+body a:active{
 	color: #F16A54; /* красный */
 }
 .clearfix::after {
@@ -78,8 +77,7 @@ p{
 	.header_card .mob_login{
 		display: none !important;
 	}
-	body a:hover,
-	body a+a:hover{
+	body a:hover{
 		color: #ffde00;
 	}
 	body a:active,
@@ -153,6 +151,12 @@ p{
 		padding: 0 36px 9px 0;
 		font: 17px 'Arial Narrow', 'PT Sans Narrow', sans-serif;
 		color: #e7eeef;
+	}
+	.base2 a:hover{
+		color: #ffde00;
+	}
+	.base2 a:active{
+	color: #F16A54; /* красный */
 	}
 	.header_card{
 		position: relative;
@@ -240,6 +244,12 @@ p{
 		color: #f6f6f6;
 		text-decoration: underline;
 		font-weight: bold;
+	}
+	.header_card a:hover{
+		color: #ffde00;
+	}
+	.header_card a:active{
+	color: #F16A54; /* красный */
 	}
 	.header_card .icon_basket{
 		float: right;
