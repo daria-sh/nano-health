@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.menu').click(function() {
+  $('.menu_mob').click(function() {
     if ($(window).width() <= 480) {
       $('#menu_mob').toggleClass('hide');
     }
@@ -11,13 +11,12 @@ $(window).resize(function() {
   }
 });
 $(document).ready(function() {
-  $('.catalog').click(function() {
+  $('.drop_down').click(function(event) {
     if ($(window).width() <= 480) {
-      $('.active_mob').toggleClass('hide');
+      $(this).toggleClass('hide');
       $(this).toggleClass('clicked_name');
-      $('.active_mob').toggleClass('clicked_subunits');
-    } else {
-      document.location.href = "#";
+      $(this).parent().find('.active_mob').toggleClass('clicked_subunits ');
+      event.preventDefault();
     }
   });
 });
