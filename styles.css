@@ -80,8 +80,7 @@ p{
 	body a:hover{
 		color: #ffde00;
 	}
-	body a:active,
-	body a+a:active{
+	body a:active{
 		color: #F16A54; /* красный */
 	}
 	.container{
@@ -139,23 +138,24 @@ p{
 		color: #e7eeef;
 		border-radius: 0 10px 10px 14px;
 	}
-	.base2 a{
+	.base2 a.mail{
 		float: left;
 		margin: 12px 0 0 30px;
 		padding-top: 2px;
 		color: #e7eeef;
 		font-size: 14px;
 	}
-	.base2 a + a{
+	.base2 a.tel{
 		float: right;
-		padding: 0 36px 9px 0;
+		padding: 12px 36px 9px 0;
 		font: 17px 'Arial Narrow', 'PT Sans Narrow', sans-serif;
 		color: #e7eeef;
 	}
-	.base2 a:hover{
+	a.mail:hover,
+	a.tel:hover{
 		color: #ffde00;
 	}
-	.base2 a:active{
+	a.tel:active{
 	color: #F16A54; /* красный */
 	}
 	.header_card{
@@ -548,21 +548,26 @@ p{
 	.top{
 		margin-bottom: -4px;
 	}
-	.base2 a + a{
+	.base2 a.tel{
 		position: absolute;
 		width: 227px;
 		font: 18px 'Arial Narrow', 'PT Sans Narrow', sans-serif;
 		top: 51px;
 		left: 233px;
 		text-decoration: none;
+		color: #e7eeef;
 	}
-	.base2 a{
+	.base2 a.mail{
 		position: absolute;
 		font-size: 14px;
 		top: 79px;
 		left: 232px;
 		text-decoration: underline;
 		color: #e7eeef;
+	}
+	.base2 a.tel:active,
+	.base2 a.mail:active{
+		color: #F16A54;
 	}
 	.base1{
 		position: absolute;
